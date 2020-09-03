@@ -17,7 +17,7 @@ function symbol_api_account_sc($atts, $content = NULL)
         $data = get_symbol_api_data($apiurl);
         return $data;
     } else {
-        error_log('error : $content is not a valid account.');
+        error_log("error : $content is not a valid account.");
         return ;
     }
 }
