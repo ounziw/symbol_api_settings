@@ -20,7 +20,7 @@ function get_symbol_api_data($api)
         $error_message = $response->get_error_message();
         error_log('error' . $error_message);
         $data = false;
-    } else if (wp_remote_retrieve_response_code($response) !== 200) {
+    } else if (wp_remote_retrieve_response_code($response) !== 200 && wp_remote_retrieve_response_code($response) !== 202) {
         error_log('response code: ' . wp_remote_retrieve_response_code($response));
         $data = false;
     } else {
