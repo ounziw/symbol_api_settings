@@ -11,7 +11,7 @@ function has_mosaic( $mosaic, $amount, $address ) {
         $apiurl .= $address;
         $data = get_symbol_api_data($apiurl);
     } else {
-        error_log('error : $address is not a valid account.');
+        error_log("error : $address is not a valid account.");
         return false;
     }
     $json = json_decode($data, true);

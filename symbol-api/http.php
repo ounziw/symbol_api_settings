@@ -4,7 +4,7 @@
 function get_symbol_api_data($api)
 {
     if (!$api) {
-        error_log('error : $api is empty.');
+        error_log("error : $api is empty.");
         return;
     }
     $url = get_option('symbol_url');
